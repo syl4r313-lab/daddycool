@@ -1,0 +1,115 @@
+// Daddy Cool - Programmbegleitung für Täterarbeit
+// Datenmodell: Teilnehmende werden ausschließlich über eine zugeteilte Frucht
+// identifiziert. Klarnamen sind optional und nur für Betreuende sichtbar.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum StaffRole {
+  ADMIN
+  BETREUER
+}
+
+enum SessionType {
+  INTERVIEW
+  SITZUNG
+  ABSCHLUSS
+}
+
+enum AttendanceStatus {
+  OFFEN
+  ANWESEND
+  ENTSCHULDIGT
+  UNENTSCHULDIGT
+}
+
+enum MessageSender {
+  TEILNEHMER
+  BETREUER
+}
+
+model Staff {
+  id           String    @id @default(cuid())
+  name         String
+  email        String    @unique
+  passwordHash String
+  role         StaffRole @default(BETREUER)
+  createdAt    DateTime  @default(now())
+
+  messages  Message[]
+  materials Material[]
+}
+
+model Participant {
+  id         String   @id @default(cuid())
+  fruitName  String   @unique
+  fruitEmoji String
+  // Klarname ist optional und wird ausschließlich in der Verwaltungsansicht
+  // für Betreuende angezeigt - niemals im Kalender, Kontakt- oder Materialbereich.
+  realName   String?
+  codeHash   String
+  active     Boolean  @default(true)
+  notes      String?
+  createdAt  DateTime @default(now())
+
+  attendances Attendance[]
+  messages    Message[]
+}
+
+model ProgramSession {
+  id            String      @id @default(cuid())
+  type          SessionType
+  sitzungNummer Int?
+  title         String
+  date          DateTime
+  location      String?
+  notes         String?
+  createdAt     DateTime    @default(now())
+
+  attendances Attendance[]
+}
+
+model Attendance {
+  id            String           @id @default(cuid())
+  participantId String
+  sessionId     String
+  status        AttendanceStatus @default(OFFEN)
+
+  participant Participant    @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  session     ProgramSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@unique([participantId, sessionId])
+}
+
+model Message {
+  id                String        @id @default(cuid())
+  participantId     String
+  staffId           String?
+  sender            MessageSender
+  body              String
+  createdAt         DateTime      @default(now())
+  readByStaff       Boolean       @default(false)
+  readByParticipant Boolean       @default(false)
+
+  participant Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  staff       Staff?      @relation(fields: [staffId], references: [id])
+}
+
+model Material {
+  id           String   @id @default(cuid())
+  title        String
+  description  String?
+  category     String?
+  url          String?
+  content      String?
+  createdAt    DateTime @default(now())
+  uploadedById String?
+
+  uploadedBy Staff? @relation(fields: [uploadedById], references: [id])
+}
