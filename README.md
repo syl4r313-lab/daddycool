@@ -26,6 +26,9 @@ Teilnehmenden-Bereich taucht ein Klarname auf.
 Es gibt zwei getrennte Bereiche mit eigenem Login:
 
 - **Team-Bereich** (`/anmelden/team`): E-Mail + Passwort für Betreuende.
+  Unter *Betreuende* können angemeldete Betreuende weitere Team-Zugänge
+  einladen (E-Mail + Passwort festlegen), Passwörter zurücksetzen und Zugänge
+  wieder entfernen. Der Seed-Lauf legt lediglich den ersten Zugang an.
 - **Programm-Bereich** (`/anmelden/programm`): Ein persönlicher, numerischer
   Zugangscode für Teilnehmende – bewusst ohne Name oder E-Mail-Adresse, damit
   die Anmeldung anonym bleibt. Der Code wird beim Anlegen einer Teilnahme im

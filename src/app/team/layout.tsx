@@ -8,6 +8,7 @@ const links = [
   { href: "/team/kalender", label: "Kalender" },
   { href: "/team/nachrichten", label: "Nachrichten" },
   { href: "/team/material", label: "Material" },
+  { href: "/team/betreuende", label: "Betreuende" },
 ];
 
 export default async function TeamLayout({
