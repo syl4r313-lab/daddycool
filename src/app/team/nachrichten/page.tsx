@@ -50,7 +50,7 @@ export default async function NachrichtenPage() {
                     <div className="flex items-center gap-2">
                       <span className="font-medium text-stone-900">{p.fruitName}</span>
                       {unread > 0 && (
-                        <span className="rounded-full bg-teal-600 px-2 py-0.5 text-xs font-medium text-white">
+                        <span className="rounded-full bg-brand-600 px-2 py-0.5 text-xs font-medium text-white">
                           {unread} neu
                         </span>
                       )}
@@ -94,7 +94,7 @@ export default async function NachrichtenPage() {
               <li key={p.id}>
                 <Link
                   href={`/team/nachrichten/${p.id}`}
-                  className="flex items-center gap-1.5 rounded-full border border-stone-200 px-3 py-1.5 text-sm hover:border-teal-300 hover:bg-teal-50"
+                  className="flex items-center gap-1.5 rounded-full border border-stone-200 px-3 py-1.5 text-sm hover:border-brand-300 hover:bg-brand-50"
                 >
                   <span>{p.fruitEmoji}</span>
                   <span>{p.fruitName}</span>

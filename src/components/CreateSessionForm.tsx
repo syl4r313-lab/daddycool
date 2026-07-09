@@ -23,7 +23,7 @@ export function CreateSessionForm({ nextSitzungNummer }: { nextSitzungNummer: nu
             name="type"
             value={type}
             onChange={(e) => setType(e.target.value as typeof type)}
-            className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+            className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
           >
             <option value="INTERVIEW">Erstgespräch</option>
             <option value="SITZUNG">Sitzung</option>
@@ -42,7 +42,7 @@ export function CreateSessionForm({ nextSitzungNummer }: { nextSitzungNummer: nu
               min={1}
               max={8}
               defaultValue={nextSitzungNummer}
-              className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+              className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
             />
           </div>
         )}
@@ -56,7 +56,7 @@ export function CreateSessionForm({ nextSitzungNummer }: { nextSitzungNummer: nu
             type="text"
             required
             placeholder="z. B. Gruppensitzung"
-            className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+            className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
           />
         </div>
         <div>
@@ -68,7 +68,7 @@ export function CreateSessionForm({ nextSitzungNummer }: { nextSitzungNummer: nu
             name="date"
             type="datetime-local"
             required
-            className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+            className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
           />
         </div>
         <div>
@@ -79,7 +79,7 @@ export function CreateSessionForm({ nextSitzungNummer }: { nextSitzungNummer: nu
             id="location"
             name="location"
             type="text"
-            className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+            className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
           />
         </div>
         <div className="sm:col-span-2">
@@ -90,7 +90,7 @@ export function CreateSessionForm({ nextSitzungNummer }: { nextSitzungNummer: nu
             id="notes"
             name="notes"
             rows={2}
-            className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+            className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
           />
         </div>
         {state?.error && (

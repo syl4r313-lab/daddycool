@@ -50,12 +50,12 @@ export function AttendanceControl({
 function optionActiveClass(status: AttendanceStatus) {
   switch (status) {
     case "ANWESEND":
-      return "border-teal-400 bg-teal-100 text-teal-800";
+      return "border-brand-400 bg-brand-100 text-brand-800";
     case "UNENTSCHULDIGT":
       return "border-red-300 bg-red-100 text-red-700";
     case "ENTSCHULDIGT":
       return "border-amber-300 bg-amber-100 text-amber-800";
     default:
-      return "border-stone-300 bg-stone-100 text-stone-700";
+      return "border-stone-400 bg-stone-100 text-stone-700";
   }
 }

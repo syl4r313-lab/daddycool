@@ -32,14 +32,14 @@ export function MessageThread({
             <div
               className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm ${
                 isOwn
-                  ? "bg-teal-700 text-white"
+                  ? "bg-brand-700 text-white"
                   : "bg-stone-100 text-stone-800"
               }`}
             >
               <p className="whitespace-pre-wrap">{m.body}</p>
               <p
                 className={`mt-1 text-[11px] ${
-                  isOwn ? "text-teal-100" : "text-stone-400"
+                  isOwn ? "text-brand-100" : "text-stone-400"
                 }`}
               >
                 {new Intl.DateTimeFormat("de-DE", {

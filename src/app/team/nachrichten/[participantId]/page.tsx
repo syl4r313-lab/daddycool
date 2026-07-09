@@ -25,7 +25,7 @@ export default async function StaffThreadPage({
 
   return (
     <div className="space-y-4">
-      <Link href="/team/nachrichten" className="text-sm text-teal-700 hover:underline">
+      <Link href="/team/nachrichten" className="text-sm text-brand-700 hover:underline">
         ← Alle Nachrichten
       </Link>
       <div className="rounded-2xl border border-stone-200 bg-white shadow-sm">

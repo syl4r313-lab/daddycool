@@ -129,7 +129,7 @@ export default async function TeilnehmerDetailPage({
               <span
                 className={`rounded-full px-2.5 py-1 text-xs font-medium ${
                   a.status === "ANWESEND"
-                    ? "bg-teal-100 text-teal-800"
+                    ? "bg-brand-100 text-brand-800"
                     : a.status === "UNENTSCHULDIGT"
                       ? "bg-red-100 text-red-700"
                       : a.status === "ENTSCHULDIGT"
@@ -164,13 +164,13 @@ function MiniStat({
   return (
     <div
       className={`rounded-xl border p-3 text-center ${
-        done ? "border-teal-300 bg-teal-50" : "border-stone-200 bg-stone-50"
+        done ? "border-brand-300 bg-brand-50" : "border-stone-200 bg-stone-50"
       }`}
     >
       <p className="text-xs text-stone-500">{label}</p>
       <p
         className={`mt-1 text-sm font-semibold ${
-          done ? "text-teal-800" : "text-stone-700"
+          done ? "text-brand-800" : "text-stone-700"
         }`}
       >
         {value}

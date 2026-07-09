@@ -43,7 +43,7 @@ export default async function ProgrammDashboard() {
           <p className="text-sm text-stone-500">
             Aktuell ist kein weiterer Termin geplant. Schau später wieder
             vorbei oder frag im{" "}
-            <Link href="/programm/kontakt" className="text-teal-700 hover:underline">
+            <Link href="/programm/kontakt" className="text-brand-700 hover:underline">
               Kontaktbereich
             </Link>{" "}
             nach.
@@ -61,7 +61,7 @@ export default async function ProgrammDashboard() {
           absolviert ({progress.prozent}%)
         </p>
         {progress.zertifikatErreicht && (
-          <p className="mt-2 rounded-lg bg-teal-50 px-3 py-2 text-sm font-medium text-teal-800">
+          <p className="mt-2 rounded-lg bg-brand-50 px-3 py-2 text-sm font-medium text-brand-800">
             🎉 Du hast alle Termine absolviert und dein Zertifikat erreicht!
           </p>
         )}
@@ -102,10 +102,12 @@ function ReminderBanner({
     days <= 0 ? "heute" : days === 1 ? "morgen" : `in ${days} Tagen`;
 
   return (
-    <div className="rounded-2xl border border-teal-300 bg-teal-50 p-6 shadow-sm">
-      <p className="text-sm font-medium text-teal-800">Nächster Termin – {dayLabel}</p>
-      <p className="mt-1 text-lg font-semibold text-teal-900">{title}</p>
-      <p className="text-sm text-teal-800">
+    <div className="rounded-2xl bg-brand-700 p-6 shadow-sm">
+      <p className="text-sm font-medium text-brand-200">
+        Nächster Termin – {dayLabel}
+      </p>
+      <p className="mt-1 text-lg font-semibold text-white">{title}</p>
+      <p className="text-sm text-brand-100">
         {new Intl.DateTimeFormat("de-DE", {
           dateStyle: "full",
           timeStyle: "short",
@@ -128,13 +130,13 @@ function MiniStat({
   return (
     <div
       className={`rounded-xl border p-3 text-center ${
-        done ? "border-teal-300 bg-teal-50" : "border-stone-200 bg-stone-50"
+        done ? "border-brand-300 bg-brand-50" : "border-stone-200 bg-stone-50"
       }`}
     >
       <p className="text-xs text-stone-500">{label}</p>
       <p
         className={`mt-1 text-sm font-semibold ${
-          done ? "text-teal-800" : "text-stone-700"
+          done ? "text-brand-800" : "text-stone-700"
         }`}
       >
         {value}

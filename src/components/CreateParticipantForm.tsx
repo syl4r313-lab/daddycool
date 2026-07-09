@@ -23,7 +23,7 @@ export function CreateParticipantForm() {
             id="realName"
             name="realName"
             type="text"
-            className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+            className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
           />
         </div>
         <div>
@@ -34,7 +34,7 @@ export function CreateParticipantForm() {
             id="notes"
             name="notes"
             type="text"
-            className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+            className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
           />
         </div>
         <div className="sm:col-span-2">
@@ -48,12 +48,12 @@ export function CreateParticipantForm() {
         </p>
       )}
       {state?.generatedCode && (
-        <div className="mt-4 rounded-lg border border-teal-300 bg-teal-50 px-4 py-3">
-          <p className="text-sm text-teal-900">
+        <div className="mt-4 rounded-lg border border-brand-300 bg-brand-50 px-4 py-3">
+          <p className="text-sm text-brand-900">
             {state.success} Zugangscode (bitte jetzt notieren und weitergeben,
             er wird nicht erneut angezeigt):
           </p>
-          <p className="mt-1 text-2xl font-bold tracking-widest text-teal-900">
+          <p className="mt-1 text-2xl font-bold tracking-widest text-brand-900">
             {state.generatedCode}
           </p>
         </div>

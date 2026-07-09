@@ -41,7 +41,7 @@ export default async function TeilnehmendePage() {
                         </span>
                       )}
                       {progress.zertifikatErreicht && (
-                        <span className="rounded-full bg-teal-100 px-2 py-0.5 text-xs text-teal-800">
+                        <span className="rounded-full bg-brand-100 px-2 py-0.5 text-xs text-brand-800">
                           Zertifikat bereit
                         </span>
                       )}

@@ -24,7 +24,7 @@ export default async function ProgrammLayout({
         links={links}
         logoutAction={logoutParticipantAction}
         badge={
-          <span className="ml-1 inline-flex items-center gap-1 rounded-full bg-teal-100 px-2 py-0.5 text-sm font-medium text-teal-800">
+          <span className="ml-1 inline-flex items-center gap-1 rounded-full bg-brand-100 px-2 py-0.5 text-sm font-medium text-brand-800">
             {participant.fruitEmoji} {participant.fruitName}
           </span>
         }

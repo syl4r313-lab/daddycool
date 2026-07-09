@@ -40,7 +40,7 @@ export default async function TeamDashboard() {
             </p>
             <Link
               href={`/team/kalender/${nextSession.id}`}
-              className="mt-3 inline-block text-sm font-medium text-teal-700 hover:underline"
+              className="mt-3 inline-block text-sm font-medium text-brand-700 hover:underline"
             >
               Anwesenheit erfassen →
             </Link>
@@ -48,7 +48,7 @@ export default async function TeamDashboard() {
         ) : (
           <p className="mt-2 text-sm text-stone-500">
             Kein bevorstehender Termin geplant.{" "}
-            <Link href="/team/kalender" className="font-medium text-teal-700 hover:underline">
+            <Link href="/team/kalender" className="font-medium text-brand-700 hover:underline">
               Termin anlegen
             </Link>
           </p>
@@ -76,7 +76,7 @@ function StatCard({
   return (
     <div
       className={`rounded-2xl border p-5 shadow-sm ${
-        highlight ? "border-teal-300 bg-teal-50" : "border-stone-200 bg-white"
+        highlight ? "border-brand-300 bg-brand-50" : "border-stone-200 bg-white"
       }`}
     >
       <p className="text-sm text-stone-500">{label}</p>
@@ -97,7 +97,7 @@ function QuickLink({
   return (
     <Link
       href={href}
-      className="flex items-center gap-3 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm transition hover:border-teal-300"
+      className="flex items-center gap-3 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm transition hover:border-brand-300"
     >
       <span className="text-2xl">{emoji}</span>
       <span className="font-medium text-stone-800">{label}</span>

@@ -21,7 +21,7 @@ export function ParticipantLoginForm() {
           required
           autoComplete="off"
           placeholder="z. B. 482913"
-          className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 text-center text-lg tracking-widest focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+          className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 text-center text-lg tracking-widest focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
         />
         <p className="mt-1 text-xs text-stone-500">
           Diesen Code hast du von deiner Betreuungsperson erhalten. Kein Name,

@@ -14,12 +14,12 @@ export function ResetCodeButton({ participantId }: { participantId: string }) {
         Neuen Zugangscode erstellen
       </SubmitButton>
       {state?.generatedCode && (
-        <div className="rounded-lg border border-teal-300 bg-teal-50 px-4 py-3">
-          <p className="text-sm text-teal-900">
+        <div className="rounded-lg border border-brand-300 bg-brand-50 px-4 py-3">
+          <p className="text-sm text-brand-900">
             Neuer Zugangscode (bitte jetzt notieren, wird nicht erneut
             angezeigt):
           </p>
-          <p className="mt-1 text-2xl font-bold tracking-widest text-teal-900">
+          <p className="mt-1 text-2xl font-bold tracking-widest text-brand-900">
             {state.generatedCode}
           </p>
         </div>
