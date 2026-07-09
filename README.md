@@ -35,26 +35,37 @@ Es gibt zwei getrennte Bereiche mit eigenem Login:
 
 - [Next.js](https://nextjs.org) (App Router) mit TypeScript
 - [Tailwind CSS](https://tailwindcss.com)
-- [Prisma](https://www.prisma.io) mit SQLite (Datei-Datenbank, kein externer
-  Server nötig)
+- [Prisma](https://www.prisma.io) mit PostgreSQL (z. B. [Neon](https://neon.tech)
+  oder Vercel Postgres)
 - Sitzungscookies (signiert mit `jose`), Passwort-/Code-Hashing mit `bcryptjs`
 
 ## Erste Schritte
 
 ```bash
 npm install
-cp .env.example .env   # SESSION_SECRET durch einen eigenen Wert ersetzen
-npm run db:migrate     # Datenbank anlegen
+cp .env.example .env   # DATABASE_URL + SESSION_SECRET eintragen
+npm run db:migrate     # Datenbank-Schema anlegen
 npm run db:seed        # Team-Zugang + Demo-Daten anlegen
 npm run dev
 ```
 
-Die Konsolenausgabe von `npm run db:seed` zeigt den erzeugten Team-Login
-sowie (beim ersten Lauf) drei Demo-Zugangscodes für Teilnehmende.
-Standard-Zugangsdaten für das Team lassen sich über die Umgebungsvariablen
-`SEED_STAFF_EMAIL` und `SEED_STAFF_PASSWORD` überschreiben.
+`DATABASE_URL` muss auf eine erreichbare PostgreSQL-Datenbank zeigen (lokal
+oder gehostet, z. B. ein kostenloses Neon-Projekt). Die Konsolenausgabe von
+`npm run db:seed` zeigt den erzeugten Team-Login sowie (beim ersten Lauf)
+drei Demo-Zugangscodes für Teilnehmende. Standard-Zugangsdaten für das Team
+lassen sich über die Umgebungsvariablen `SEED_STAFF_EMAIL` und
+`SEED_STAFF_PASSWORD` überschreiben.
 
 Öffne anschließend [http://localhost:3000](http://localhost:3000).
+
+## Deployment (z. B. Vercel)
+
+`npm run build` führt automatisch `prisma migrate deploy` und den Seed-Lauf
+vor `next build` aus – bei einem Deploy müssen also nur die Umgebungsvariablen
+`DATABASE_URL` und `SESSION_SECRET` gesetzt werden, der Rest passiert beim
+Build. Da der Seed-Lauf idempotent ist (Staff-Account per Upsert, Demo-Daten
+nur beim allerersten Mal), ist es unkritisch, ihn bei jedem Deploy erneut
+laufen zu lassen.
 
 ## Datenmodell (Kurzüberblick)
 

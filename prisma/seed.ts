@@ -1,11 +1,13 @@
 import bcrypt from "bcryptjs";
 import { PrismaClient } from "../src/generated/prisma/client";
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { FRUITS } from "../src/lib/fruits";
 
-const adapter = new PrismaBetterSqlite3({
-  url: process.env.DATABASE_URL ?? "file:./prisma/dev.db",
-});
+if (!process.env.DATABASE_URL) {
+  throw new Error("DATABASE_URL ist nicht gesetzt.");
+}
+
+const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
 const prisma = new PrismaClient({ adapter });
 
 const STAFF_EMAIL = process.env.SEED_STAFF_EMAIL ?? "team@daddycool.example";
