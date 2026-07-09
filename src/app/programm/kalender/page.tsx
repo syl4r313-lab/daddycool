@@ -80,7 +80,7 @@ function List({
             <span
               className={`whitespace-nowrap rounded-full px-2.5 py-1 text-xs font-medium ${
                 a.status === "ANWESEND"
-                  ? "bg-teal-100 text-teal-800"
+                  ? "bg-brand-100 text-brand-800"
                   : a.status === "UNENTSCHULDIGT"
                     ? "bg-red-100 text-red-700"
                     : a.status === "ENTSCHULDIGT"

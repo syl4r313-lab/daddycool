@@ -25,7 +25,7 @@ export default async function SessionDetailPage({
     <div className="space-y-6">
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-sm font-medium text-teal-700">
+          <p className="text-sm font-medium text-brand-700">
             {sessionLabel(session)}
           </p>
           <h1 className="text-xl font-semibold text-stone-900">{session.title}</h1>

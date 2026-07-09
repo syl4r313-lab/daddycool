@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Daddy Cool – helles, gut lesbares Farbschema, ausgerichtet am Logo
+ * (Anthrazit "Daddy" + Grau "Cool" auf Weiß). Bewusst KEIN automatisches
+ * Dark-Mode-Umschalten: die App ist durchgängig für hellen Hintergrund mit
+ * dunkler Schrift gebaut, damit nie helle Schrift auf hellem Grund entsteht.
+ */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
+  /* Markenfarbe: neutrales Anthrazit/Grau passend zum Logo */
+  --color-brand-50: #f5f6f7;
+  --color-brand-100: #e7e9eb;
+  --color-brand-200: #d4d7db;
+  --color-brand-300: #b0b5bb;
+  --color-brand-400: #868c94;
+  --color-brand-500: #5f656d;
+  --color-brand-600: #3d424a;
+  --color-brand-700: #2a2e35;
+  --color-brand-800: #21242a;
+  --color-brand-900: #17191d;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f7f6;
+  color: #17191d;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/*
+ * Lesbarkeits-Grundregeln für Eingabefelder: immer dunkle Schrift auf
+ * weißem Feld mit deutlich sichtbarem Platzhalter. Dient als Sicherheitsnetz,
+ * falls an einer Stelle keine Utility-Klasse die Farbe setzt.
+ */
+input,
+textarea,
+select {
+  color: #17191d;
+  background-color: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8b9096;
+  opacity: 1;
 }

@@ -32,7 +32,7 @@ export default async function ProgrammMaterialPage() {
                 href={m.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-block text-sm font-medium text-teal-700 hover:underline"
+                className="mt-2 inline-block text-sm font-medium text-brand-700 hover:underline"
               >
                 Material öffnen →
               </a>

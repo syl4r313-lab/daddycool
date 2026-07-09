@@ -27,7 +27,7 @@ export function EditParticipantForm({
           name="realName"
           type="text"
           defaultValue={realName ?? ""}
-          className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+          className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
         />
       </div>
       <div>
@@ -39,7 +39,7 @@ export function EditParticipantForm({
           name="notes"
           rows={3}
           defaultValue={notes ?? ""}
-          className="mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
+          className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
         />
       </div>
       {state?.error && (
@@ -48,7 +48,7 @@ export function EditParticipantForm({
         </p>
       )}
       {state?.success && (
-        <p className="rounded-lg bg-teal-50 px-3 py-2 text-sm text-teal-800">
+        <p className="rounded-lg bg-brand-50 px-3 py-2 text-sm text-brand-800">
           {state.success}
         </p>
       )}

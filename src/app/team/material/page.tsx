@@ -37,7 +37,7 @@ export default async function TeamMaterialPage() {
                     href={m.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 inline-block text-sm text-teal-700 hover:underline"
+                    className="mt-1 inline-block text-sm text-brand-700 hover:underline"
                   >
                     {m.url}
                   </a>
