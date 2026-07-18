@@ -17,15 +17,13 @@ export function CreatedByCredit({ className = "" }: { className?: string }) {
         Erstellt von
       </p>
       {imgOk ? (
-        <span className="inline-flex items-center rounded-xl border border-stone-200 bg-white px-5 py-3 shadow-sm">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/kuma-consulting.png"
-            alt="KUMA Consulting"
-            className="h-auto w-48 object-contain sm:w-56"
-            onError={() => setImgOk(false)}
-          />
-        </span>
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          src="/kuma-consulting.png"
+          alt="KUMA Consulting"
+          className="h-auto w-52 object-contain sm:w-60"
+          onError={() => setImgOk(false)}
+        />
       ) : (
         <span className="text-base font-bold tracking-tight">
           <span className="text-[#20486b]">KUMA</span>{" "}
