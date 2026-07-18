@@ -17,12 +17,12 @@ export function CreatedByCredit({ className = "" }: { className?: string }) {
         Erstellt von
       </p>
       {imgOk ? (
-        <span className="inline-flex items-center rounded-xl border border-stone-200 bg-white px-4 py-2 shadow-sm">
+        <span className="inline-flex items-center rounded-xl border border-stone-200 bg-white px-5 py-3 shadow-sm">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/kuma-consulting.png"
             alt="KUMA Consulting"
-            className="h-12 w-auto object-contain"
+            className="h-auto w-48 object-contain sm:w-56"
             onError={() => setImgOk(false)}
           />
         </span>
