@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { getCurrentStaff } from "@/lib/auth";
 import { StaffLoginForm } from "@/components/StaffLoginForm";
 import { Logo } from "@/components/Logo";
+import { CreatedByCredit } from "@/components/CreatedByCredit";
 
 export default async function TeamLoginPage() {
   const staff = await getCurrentStaff();
@@ -33,6 +34,8 @@ export default async function TeamLoginPage() {
           Hier geht es zu deinem Zugang
         </Link>
       </p>
+
+      <CreatedByCredit className="mt-10" />
     </main>
   );
 }

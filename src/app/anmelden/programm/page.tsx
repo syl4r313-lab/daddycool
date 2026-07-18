@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { getCurrentParticipant } from "@/lib/auth";
 import { ParticipantLoginForm } from "@/components/ParticipantLoginForm";
 import { Logo } from "@/components/Logo";
+import { CreatedByCredit } from "@/components/CreatedByCredit";
 
 export default async function ProgrammLoginPage() {
   const participant = await getCurrentParticipant();
@@ -33,6 +34,8 @@ export default async function ProgrammLoginPage() {
           Hier geht es zum Team-Bereich
         </Link>
       </p>
+
+      <CreatedByCredit className="mt-10" />
     </main>
   );
 }
