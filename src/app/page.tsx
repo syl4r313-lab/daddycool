@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { CreatedByCredit } from "@/components/CreatedByCredit";
 
 export default function Home() {
   return (
@@ -49,6 +50,8 @@ export default function Home() {
           </span>
         </Link>
       </div>
+
+      <CreatedByCredit className="mt-12" />
     </main>
   );
 }
