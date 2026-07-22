@@ -32,7 +32,7 @@ export default async function NachrichtenPage() {
         <div className="border-b border-stone-200 px-6 py-4">
           <h1 className="font-semibold text-stone-900">Nachrichten</h1>
           <p className="text-sm text-stone-500">
-            Teilnehmende schreiben anonym über ihre zugeteilte Frucht.
+            Teilnehmende schreiben anonym über ihre zugeteilte Automarke.
           </p>
         </div>
         <ul className="divide-y divide-stone-100">

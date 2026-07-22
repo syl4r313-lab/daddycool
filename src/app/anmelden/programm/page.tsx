@@ -22,7 +22,7 @@ export default async function ProgrammLoginPage() {
         </h1>
         <p className="mt-1 text-sm text-stone-600">
           Gib deinen persönlichen Zugangscode ein. Im Programm wirst du nur
-          über deine zugeteilte Frucht angezeigt – nie über deinen Namen.
+          über deine zugeteilte Automarke angezeigt – nie über deinen Namen.
         </p>
         <div className="mt-6">
           <ParticipantLoginForm />

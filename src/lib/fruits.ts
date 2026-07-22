@@ -1,27 +1,31 @@
+// Anonymisierungs-Label für Teilnehmende: Automarken statt Klarnamen.
+// (Interne Bezeichnung "FRUITS" bleibt aus Kompatibilitätsgründen erhalten.)
 export const FRUITS: { name: string; emoji: string }[] = [
-  { name: "Apfel", emoji: "🍎" },
-  { name: "Birne", emoji: "🍐" },
-  { name: "Kirsche", emoji: "🍒" },
-  { name: "Traube", emoji: "🍇" },
-  { name: "Pfirsich", emoji: "🍑" },
-  { name: "Zitrone", emoji: "🍋" },
-  { name: "Orange", emoji: "🍊" },
-  { name: "Ananas", emoji: "🍍" },
-  { name: "Mango", emoji: "🥭" },
-  { name: "Kiwi", emoji: "🥝" },
-  { name: "Melone", emoji: "🍈" },
-  { name: "Wassermelone", emoji: "🍉" },
-  { name: "Erdbeere", emoji: "🍓" },
-  { name: "Heidelbeere", emoji: "🫐" },
-  { name: "Kokosnuss", emoji: "🥥" },
-  { name: "Banane", emoji: "🍌" },
-  { name: "Limette", emoji: "🍋‍🟩" },
-  { name: "Olive", emoji: "🫒" },
-  { name: "Feige", emoji: "🌰" },
-  { name: "Litschi", emoji: "🍑" },
+  { name: "Volkswagen", emoji: "🚗" },
+  { name: "Mercedes", emoji: "🚙" },
+  { name: "BMW", emoji: "🏎️" },
+  { name: "Audi", emoji: "🚘" },
+  { name: "Porsche", emoji: "🏎️" },
+  { name: "Opel", emoji: "🚗" },
+  { name: "Ford", emoji: "🚙" },
+  { name: "Škoda", emoji: "🚗" },
+  { name: "Tesla", emoji: "🚘" },
+  { name: "Toyota", emoji: "🚙" },
+  { name: "Volvo", emoji: "🚗" },
+  { name: "Renault", emoji: "🚙" },
+  { name: "Peugeot", emoji: "🚗" },
+  { name: "Fiat", emoji: "🚗" },
+  { name: "Seat", emoji: "🚗" },
+  { name: "Mazda", emoji: "🏎️" },
+  { name: "Nissan", emoji: "🚙" },
+  { name: "Hyundai", emoji: "🚗" },
+  { name: "Kia", emoji: "🚗" },
+  { name: "Mini", emoji: "🚗" },
+  { name: "Jaguar", emoji: "🚘" },
+  { name: "Citroën", emoji: "🚗" },
 ];
 
-/** Liefert die nächste freie Frucht (inkl. Zähler, falls die Liste erschöpft ist). */
+/** Liefert die nächste freie Automarke (inkl. Zähler, falls die Liste erschöpft ist). */
 export function suggestNextFruit(usedFruitNames: string[]): {
   name: string;
   emoji: string;
@@ -31,7 +35,7 @@ export function suggestNextFruit(usedFruitNames: string[]): {
       return fruit;
     }
   }
-  // Alle Basisfrüchte vergeben: mit Zähler weiterzählen (Apfel 2, Apfel 3, ...)
+  // Alle Marken vergeben: mit Zähler weiterzählen (Volkswagen 2, Volkswagen 3, ...)
   let counter = 2;
   while (true) {
     for (const fruit of FRUITS) {
