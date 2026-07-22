@@ -9,8 +9,8 @@ Teilnehmenden-Bereich taucht ein Klarname auf.
 - **Anonymisierung**: Jede/r Teilnehmende erhält automatisch eine Automarke
   (🚗 Volkswagen, 🚙 Mercedes, …) als Anzeigenamen. Der optionale Klarname ist
   nur in der internen Verwaltungsansicht für Betreuende sichtbar.
-- **Kalender**: Betreuende legen Termine an (Erstgespräch, 8 Sitzungen,
-  Abschlussgespräch) und erfassen die Anwesenheit. Teilnehmende sehen ihre
+- **Kalender**: Betreuende legen Termine an (Erstgespräch, Einzelgespräch,
+  8 Sitzungen, Abschlussgespräch) und erfassen die Anwesenheit. Teilnehmende sehen ihre
   kommenden und vergangenen Termine sowie ihren eigenen Anwesenheitsstatus.
 - **Erinnerung**: Das Dashboard der Teilnehmenden zeigt den nächsten Termin
   mit Countdown ("in 3 Tagen") prominent an.
@@ -20,8 +20,8 @@ Teilnehmenden-Bereich taucht ein Klarname auf.
   (Motivations-Skala, Trigger, Ziele, Verantwortung u. a.) direkt in der App.
   Die ausgefüllten Antworten sind ausschließlich für das Team einsehbar
   (auf der jeweiligen Teilnehmer-Detailseite).
-- **Fortschritt**: Teilnehmende sehen jederzeit, wie viele der insgesamt 10
-  Termine (1 Erstgespräch + 8 Sitzungen + 1 Abschlussgespräch) sie bereits
+- **Fortschritt**: Teilnehmende sehen jederzeit, wie viele der insgesamt 11
+  Termine (1 Erstgespräch + 1 Einzelgespräch + 8 Sitzungen + 1 Abschlussgespräch) sie bereits
   absolviert haben und ob das Zertifikat erreicht ist.
 
 ## Zugänge

@@ -64,11 +64,16 @@ export default async function TeilnehmerDetailPage({
           absolviert
           {progress.zertifikatErreicht ? " – Zertifikat erreicht 🎉" : ""}
         </p>
-        <div className="mt-4 grid gap-3 sm:grid-cols-3">
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
           <MiniStat
             label="Erstgespräch"
             value={progress.interviewAbsolviert ? "Erledigt" : "Ausstehend"}
             done={progress.interviewAbsolviert}
+          />
+          <MiniStat
+            label="Einzelgespräch"
+            value={progress.einzelgespraechAbsolviert ? "Erledigt" : "Ausstehend"}
+            done={progress.einzelgespraechAbsolviert}
           />
           <MiniStat
             label="Sitzungen"

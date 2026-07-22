@@ -27,8 +27,8 @@ export default async function ProgrammKalenderPage() {
       <div>
         <h1 className="text-xl font-semibold text-stone-900">Kalender</h1>
         <p className="text-sm text-stone-500">
-          Alle Termine des Programms: 1 Erstgespräch, 8 Sitzungen und ein
-          Abschlussgespräch.
+          Alle Termine des Programms: 1 Erstgespräch, 1 Einzelgespräch,
+          8 Sitzungen und ein Abschlussgespräch.
         </p>
       </div>
 

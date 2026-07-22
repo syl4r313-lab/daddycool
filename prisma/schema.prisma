@@ -19,6 +19,7 @@ enum StaffRole {
 
 enum SessionType {
   INTERVIEW
+  EINZELGESPRAECH
   SITZUNG
   ABSCHLUSS
 }
