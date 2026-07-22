@@ -5,6 +5,7 @@ import { EditParticipantForm } from "@/components/EditParticipantForm";
 import { ResetCodeButton } from "@/components/ResetCodeButton";
 import { ProgressBar } from "@/components/ProgressBar";
 import { ToggleActiveButton } from "@/components/ToggleActiveButton";
+import { WorksheetResults } from "@/components/WorksheetResults";
 
 const ATTENDANCE_LABELS: Record<string, string> = {
   OFFEN: "Offen",
@@ -23,6 +24,7 @@ export default async function TeilnehmerDetailPage({
     where: { id },
     include: {
       attendances: { include: { session: true }, orderBy: { session: { date: "asc" } } },
+      worksheetResponses: true,
     },
   });
   if (!participant) notFound();
@@ -107,6 +109,8 @@ export default async function TeilnehmerDetailPage({
           </div>
         </div>
       </div>
+
+      <WorksheetResults responses={participant.worksheetResponses} />
 
       <div className="rounded-2xl border border-stone-200 bg-white shadow-sm">
         <div className="border-b border-stone-200 px-6 py-4">

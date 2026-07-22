@@ -11,7 +11,7 @@ export default function Home() {
         Programmbegleitung
       </h1>
       <p className="mt-4 max-w-xl text-base text-stone-600">
-        Kalender, anonymer Kontakt zu Betreuenden, Materialien zum Nachlesen
+        Kalender, anonymer Kontakt zu Betreuenden, interaktive Arbeitsblätter
         und der eigene Fortschritt im Programm – alles an einem Ort.
         Teilnehmende werden ausschließlich über eine zugeteilte Automarke
         angezeigt, niemals über ihren Klarnamen.
