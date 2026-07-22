@@ -10,7 +10,7 @@ import type { AttendanceStatus, SessionType } from "@/generated/prisma/client";
 export type ActionState = { error?: string; success?: string } | null;
 
 const sessionSchema = z.object({
-  type: z.enum(["INTERVIEW", "SITZUNG", "ABSCHLUSS"]),
+  type: z.enum(["INTERVIEW", "EINZELGESPRAECH", "SITZUNG", "ABSCHLUSS"]),
   sitzungNummer: z.coerce.number().int().min(1).max(8).optional(),
   title: z.string().trim().min(1, "Bitte einen Titel angeben."),
   date: z.string().min(1, "Bitte Datum und Uhrzeit angeben."),

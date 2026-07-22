@@ -6,9 +6,9 @@ import { SubmitButton } from "@/components/SubmitButton";
 
 export function CreateSessionForm({ nextSitzungNummer }: { nextSitzungNummer: number }) {
   const [state, formAction] = useActionState(createSessionAction, null);
-  const [type, setType] = useState<"INTERVIEW" | "SITZUNG" | "ABSCHLUSS">(
-    "SITZUNG",
-  );
+  const [type, setType] = useState<
+    "INTERVIEW" | "EINZELGESPRAECH" | "SITZUNG" | "ABSCHLUSS"
+  >("SITZUNG");
 
   return (
     <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
@@ -26,6 +26,7 @@ export function CreateSessionForm({ nextSitzungNummer }: { nextSitzungNummer: nu
             className="mt-1 w-full rounded-lg border border-stone-400 px-3 py-2 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600"
           >
             <option value="INTERVIEW">Erstgespräch</option>
+            <option value="EINZELGESPRAECH">Einzelgespräch</option>
             <option value="SITZUNG">Sitzung</option>
             <option value="ABSCHLUSS">Abschlussgespräch</option>
           </select>
