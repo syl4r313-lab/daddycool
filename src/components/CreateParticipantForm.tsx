@@ -11,7 +11,7 @@ export function CreateParticipantForm() {
     <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
       <h2 className="font-semibold text-stone-900">Neue Teilnahme anlegen</h2>
       <p className="mt-1 text-sm text-stone-500">
-        Es wird automatisch die nächste freie Frucht sowie ein Zugangscode
+        Es wird automatisch die nächste freie Automarke sowie ein Zugangscode
         vergeben. Der Klarname ist optional und nur für das Team sichtbar.
       </p>
       <form action={formAction} className="mt-4 grid gap-3 sm:grid-cols-2">

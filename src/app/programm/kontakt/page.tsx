@@ -19,7 +19,7 @@ export default async function KontaktPage() {
         <h1 className="text-xl font-semibold text-stone-900">Kontakt</h1>
         <p className="text-sm text-stone-500">
           Schreib den Betreuenden eine Nachricht. Sie sehen dabei nur deine
-          Frucht – nie deinen Namen.
+          Automarke – nie deinen Namen.
         </p>
       </div>
       <div className="rounded-2xl border border-stone-200 bg-white shadow-sm">

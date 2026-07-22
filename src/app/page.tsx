@@ -8,12 +8,12 @@ export default function Home() {
       <Logo iconSize={56} className="gap-3" wordmarkClassName="text-3xl sm:text-4xl" />
 
       <h1 className="mt-8 text-3xl font-bold text-stone-900 sm:text-4xl">
-        Programmbegleitung für die Täterarbeit
+        Programmbegleitung
       </h1>
       <p className="mt-4 max-w-xl text-base text-stone-600">
         Kalender, anonymer Kontakt zu Betreuenden, Materialien zum Nachlesen
         und der eigene Fortschritt im Programm – alles an einem Ort.
-        Teilnehmende werden ausschließlich über eine zugeteilte Frucht
+        Teilnehmende werden ausschließlich über eine zugeteilte Automarke
         angezeigt, niemals über ihren Klarnamen.
       </p>
 

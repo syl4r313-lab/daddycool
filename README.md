@@ -1,7 +1,7 @@
 # Daddy Cool – Programmbegleitung
 
-Web-App zur Begleitung des Täterarbeit-Programms **Daddy Cool**. Teilnehmende
-werden ausschließlich über eine zugeteilte Frucht angezeigt – nirgends im
+Web-App zur Begleitung des Programms **Daddy Cool**. Teilnehmende werden
+ausschließlich über eine zugeteilte Automarke angezeigt – nirgends im
 Teilnehmenden-Bereich taucht ein Klarname auf.
 
 ## Funktionen
