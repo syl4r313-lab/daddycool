@@ -253,6 +253,52 @@ export const WORKSHEETS: Worksheet[] = [
       },
     ],
   },
+  {
+    key: "abschluss_feedback",
+    title: "Abschluss-Feedback zum Programm",
+    intro:
+      "Zum Ende des Programms: Was möchtest du über deine Zeit hier sagen? Dein ehrliches Feedback hilft, das Programm für andere zu verbessern.",
+    fields: [
+      {
+        key: "helped_most",
+        label: "Was hat dir im Programm am meisten geholfen?",
+        type: "longtext",
+      },
+      {
+        key: "missing",
+        label: "Was hat dir gefehlt oder was würdest du dir anders wünschen?",
+        type: "longtext",
+      },
+      {
+        key: "changes",
+        label: "Was hat sich für dich seit Beginn des Programms verändert?",
+        type: "longtext",
+      },
+      {
+        key: "satisfaction_overall",
+        label: "Wie zufrieden bist du insgesamt mit dem Programm?",
+        type: "scale",
+        min: 0,
+        max: 10,
+        minLabel: "gar nicht",
+        maxLabel: "sehr zufrieden",
+      },
+      {
+        key: "recommend",
+        label: "Wie wahrscheinlich würdest du das Programm weiterempfehlen?",
+        type: "scale",
+        min: 0,
+        max: 10,
+        minLabel: "gar nicht",
+        maxLabel: "sehr wahrscheinlich",
+      },
+      {
+        key: "message_to_team",
+        label: "Was möchtest du den Betreuenden zum Abschluss noch sagen?",
+        type: "longtext",
+      },
+    ],
+  },
 ];
 
 export function getWorksheet(key: string): Worksheet | undefined {

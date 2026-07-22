@@ -61,6 +61,7 @@ model Participant {
   attendances        Attendance[]
   messages           Message[]
   worksheetResponses WorksheetResponse[]
+  feedback           Feedback[]
 }
 
 model ProgramSession {
@@ -113,4 +114,14 @@ model WorksheetResponse {
   participant Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
 
   @@unique([participantId, worksheetKey])
+}
+
+model Feedback {
+  id            String   @id @default(cuid())
+  participantId String
+  body          String
+  createdAt     DateTime @default(now())
+  readByStaff   Boolean  @default(false)
+
+  participant Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
 }

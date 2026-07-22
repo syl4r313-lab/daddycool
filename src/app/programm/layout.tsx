@@ -7,6 +7,7 @@ const links = [
   { href: "/programm/kalender", label: "Kalender" },
   { href: "/programm/kontakt", label: "Kontakt" },
   { href: "/programm/mitarbeit", label: "Mitarbeit" },
+  { href: "/programm/feedback", label: "Feedback" },
 ];
 
 export default async function ProgrammLayout({

@@ -7,6 +7,7 @@ const links = [
   { href: "/team/teilnehmende", label: "Teilnehmende" },
   { href: "/team/kalender", label: "Kalender" },
   { href: "/team/nachrichten", label: "Nachrichten" },
+  { href: "/team/feedback", label: "Feedback" },
   { href: "/team/betreuende", label: "Betreuende" },
 ];
 

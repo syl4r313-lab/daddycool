@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { sessionLabel } from "@/lib/progress";
 
 export default async function TeamDashboard() {
-  const [activeCount, nextSession, unreadMessages, worksheetCount] =
+  const [activeCount, nextSession, unreadMessages, unreadFeedback, worksheetCount] =
     await Promise.all([
       prisma.participant.count({ where: { active: true } }),
       prisma.programSession.findFirst({
@@ -13,14 +13,16 @@ export default async function TeamDashboard() {
       prisma.message.count({
         where: { sender: "TEILNEHMER", readByStaff: false },
       }),
+      prisma.feedback.count({ where: { readByStaff: false } }),
       prisma.worksheetResponse.count(),
     ]);
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="Aktive Teilnehmende" value={activeCount} />
         <StatCard label="Ungelesene Nachrichten" value={unreadMessages} highlight={unreadMessages > 0} />
+        <StatCard label="Neues Feedback" value={unreadFeedback} highlight={unreadFeedback > 0} />
         <StatCard label="Bearbeitete Arbeitsblätter" value={worksheetCount} />
       </div>
 
