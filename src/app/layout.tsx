@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Daddy Cool – Programmbegleitung",
   description:
-    "Begleitende Web-App für das Programm Daddy Cool: Kalender, anonymer Kontakt und Materialien.",
+    "Begleitende Web-App für das Programm Daddy Cool: Kalender, anonymer Kontakt und interaktive Arbeitsblätter.",
 };
 
 export default function RootLayout({

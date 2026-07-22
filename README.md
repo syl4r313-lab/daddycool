@@ -6,17 +6,20 @@ Teilnehmenden-Bereich taucht ein Klarname auf.
 
 ## Funktionen
 
-- **Anonymisierung**: Jede/r Teilnehmende erhält automatisch eine Frucht
-  (🍎 Apfel, 🍐 Birne, …) als Anzeigenamen. Der optionale Klarname ist nur in
-  der internen Verwaltungsansicht für Betreuende sichtbar.
+- **Anonymisierung**: Jede/r Teilnehmende erhält automatisch eine Automarke
+  (🚗 Volkswagen, 🚙 Mercedes, …) als Anzeigenamen. Der optionale Klarname ist
+  nur in der internen Verwaltungsansicht für Betreuende sichtbar.
 - **Kalender**: Betreuende legen Termine an (Erstgespräch, 8 Sitzungen,
   Abschlussgespräch) und erfassen die Anwesenheit. Teilnehmende sehen ihre
   kommenden und vergangenen Termine sowie ihren eigenen Anwesenheitsstatus.
 - **Erinnerung**: Das Dashboard der Teilnehmenden zeigt den nächsten Termin
   mit Countdown ("in 3 Tagen") prominent an.
 - **Anonymer Kontakt**: Teilnehmende können den Betreuenden Nachrichten
-  schreiben – sichtbar ist dabei nur die Frucht, nie der Name.
-- **Material**: Betreuende stellen Texte und Links zum Nachlesen bereit.
+  schreiben – sichtbar ist dabei nur die Automarke, nie der Name.
+- **Mitarbeit**: Teilnehmende bearbeiten interaktive Arbeitsblätter
+  (Motivations-Skala, Trigger, Ziele, Verantwortung u. a.) direkt in der App.
+  Die ausgefüllten Antworten sind ausschließlich für das Team einsehbar
+  (auf der jeweiligen Teilnehmer-Detailseite).
 - **Fortschritt**: Teilnehmende sehen jederzeit, wie viele der insgesamt 10
   Termine (1 Erstgespräch + 8 Sitzungen + 1 Abschlussgespräch) sie bereits
   absolviert haben und ob das Zertifikat erreicht ist.
@@ -78,7 +81,9 @@ laufen zu lassen.
 - `ProgramSession` – Termine (`INTERVIEW`, `SITZUNG` 1–8, `ABSCHLUSS`)
 - `Attendance` – Anwesenheitsstatus je Teilnehmer:in und Termin
 - `Message` – Nachrichten zwischen Teilnehmenden und Betreuenden
-- `Material` – Texte/Links zum Nachlesen
+- `WorksheetResponse` – Antworten der Teilnehmenden auf die interaktiven
+  Arbeitsblätter (JSON); der Arbeitsblatt-Katalog liegt in
+  `src/lib/worksheets.ts`
 
 ## Hinweise
 

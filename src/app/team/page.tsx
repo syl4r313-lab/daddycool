@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { sessionLabel } from "@/lib/progress";
 
 export default async function TeamDashboard() {
-  const [activeCount, nextSession, unreadMessages, materialCount] =
+  const [activeCount, nextSession, unreadMessages, worksheetCount] =
     await Promise.all([
       prisma.participant.count({ where: { active: true } }),
       prisma.programSession.findFirst({
@@ -13,7 +13,7 @@ export default async function TeamDashboard() {
       prisma.message.count({
         where: { sender: "TEILNEHMER", readByStaff: false },
       }),
-      prisma.material.count(),
+      prisma.worksheetResponse.count(),
     ]);
 
   return (
@@ -21,7 +21,7 @@ export default async function TeamDashboard() {
       <div className="grid gap-4 sm:grid-cols-3">
         <StatCard label="Aktive Teilnehmende" value={activeCount} />
         <StatCard label="Ungelesene Nachrichten" value={unreadMessages} highlight={unreadMessages > 0} />
-        <StatCard label="Materialien" value={materialCount} />
+        <StatCard label="Bearbeitete Arbeitsblätter" value={worksheetCount} />
       </div>
 
       <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
@@ -56,9 +56,9 @@ export default async function TeamDashboard() {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-3">
-        <QuickLink href="/team/teilnehmende" label="Teilnehmende verwalten" emoji="🍎" />
+        <QuickLink href="/team/teilnehmende" label="Teilnehmende verwalten" emoji="🚗" />
         <QuickLink href="/team/nachrichten" label="Nachrichten beantworten" emoji="💬" />
-        <QuickLink href="/team/material" label="Material bereitstellen" emoji="📚" />
+        <QuickLink href="/team/kalender" label="Termine & Anwesenheit" emoji="📅" />
       </div>
     </div>
   );

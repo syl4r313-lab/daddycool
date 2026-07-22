@@ -85,16 +85,6 @@ async function main() {
         data: { participantId: p.id, sessionId: sitzung2.id, status: "OFFEN" },
       });
     }
-
-    await prisma.material.create({
-      data: {
-        title: "Willkommen bei Daddy Cool",
-        description: "Kurzer Überblick über Ablauf und Ziele des Programms.",
-        category: "Einstieg",
-        content:
-          "Daddy Cool begleitet Väter dabei, Verantwortung für ihr Verhalten zu übernehmen und gewaltfreie Wege im Familienalltag zu finden. Das Programm umfasst ein Erstgespräch, 8 Gruppensitzungen und ein Abschlussgespräch.",
-      },
-    });
   }
 
   console.log("Seed abgeschlossen.");

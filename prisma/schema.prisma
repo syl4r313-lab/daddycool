@@ -1,6 +1,7 @@
-// Daddy Cool - Programmbegleitung für Täterarbeit
-// Datenmodell: Teilnehmende werden ausschließlich über eine zugeteilte Frucht
-// identifiziert. Klarnamen sind optional und nur für Betreuende sichtbar.
+// Daddy Cool - Programmbegleitung
+// Datenmodell: Teilnehmende werden ausschließlich über eine zugeteilte
+// Automarke identifiziert. Klarnamen sind optional und nur für Betreuende
+// sichtbar.
 
 generator client {
   provider = "prisma-client"
@@ -42,8 +43,7 @@ model Staff {
   role         StaffRole @default(BETREUER)
   createdAt    DateTime  @default(now())
 
-  messages  Message[]
-  materials Material[]
+  messages Message[]
 }
 
 model Participant {
@@ -58,8 +58,9 @@ model Participant {
   notes      String?
   createdAt  DateTime @default(now())
 
-  attendances Attendance[]
-  messages    Message[]
+  attendances        Attendance[]
+  messages           Message[]
+  worksheetResponses WorksheetResponse[]
 }
 
 model ProgramSession {
@@ -101,15 +102,15 @@ model Message {
   staff       Staff?      @relation(fields: [staffId], references: [id])
 }
 
-model Material {
-  id           String   @id @default(cuid())
-  title        String
-  description  String?
-  category     String?
-  url          String?
-  content      String?
-  createdAt    DateTime @default(now())
-  uploadedById String?
+model WorksheetResponse {
+  id            String   @id @default(cuid())
+  participantId String
+  worksheetKey  String
+  answers       Json
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 
-  uploadedBy Staff? @relation(fields: [uploadedById], references: [id])
+  participant Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+
+  @@unique([participantId, worksheetKey])
 }
